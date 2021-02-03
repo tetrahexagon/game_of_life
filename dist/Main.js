@@ -140,7 +140,7 @@ var Main = /** @class */ (function () {
                 if ((x != cell.x && y != cell.x ||
                     (x == cell.x && y != cell.y) ||
                     (x != cell.x && y == cell.y)) &&
-                    this.cellIsAdded(cell) === false) {
+                    this.cellIsAdded({ x: x, y: y }) === false) {
                     enviroment.push({ x: x, y: y });
                 }
             }
@@ -233,6 +233,7 @@ var Main = /** @class */ (function () {
      * Playing the round depend on the rules
      */
     Main.prototype.playRound = function () {
+        console.log("run");
         /*
          Births and deaths do not affect each other in a given circle, so we need collect and process the relevant cells
          separately

@@ -11,6 +11,7 @@ This project uses TypeScript, Bootstrap, and JQuery.
 If you want to build the project by yourself, you might need to add JQuery type as dependency, so TS can compile properly
 
 ```sh
+npm i
 npm install @types/jquery --save-dev
 ```
 ## Rules and the game

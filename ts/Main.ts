@@ -177,11 +177,12 @@ class Main {
         let enviroment: Cell[] = [];
         for(let x = cell.x-this.cellEnviroment;x<=cell.x+this.cellEnviroment;x++){
             for(let y = cell.y-this.cellEnviroment;y<=cell.y+this.cellEnviroment;y++){
+
                 if(
                     (x != cell.x && y != cell.x ||
                     (x == cell.x && y != cell.y) ||
                     (x != cell.x && y == cell.y )) &&
-                    this.cellIsAdded(cell) === false
+                    this.cellIsAdded({x:x,y:y}) === false
                 ){
                     enviroment.push({ x:x, y:y });
                 }
@@ -280,6 +281,7 @@ class Main {
      * Playing the round depend on the rules
      */
     protected playRound(){
+        console.log("run");
         /*
          Births and deaths do not affect each other in a given circle, so we need collect and process the relevant cells
          separately
