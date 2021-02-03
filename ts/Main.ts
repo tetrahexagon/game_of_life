@@ -280,8 +280,7 @@ class Main {
     /**
      * Playing the round depend on the rules
      */
-    protected playRound(){
-        console.log("run");
+    protected playRound(){ 
         /*
          Births and deaths do not affect each other in a given circle, so we need collect and process the relevant cells
          separately
